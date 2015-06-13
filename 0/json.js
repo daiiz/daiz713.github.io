@@ -280,7 +280,20 @@ var data =
       d: "",
       title: "時間割",
       links: {
+      }
+    }
+  },
 
+  /* Apricot */
+  {
+    "tag": ["draft"],
+    "body": {
+      d: "Coming Soon...",
+      title: "Apricot",
+      image: "imgs/apricot.png",
+      links: {
+        article: "",
+        github: "https://github.com/daiz713/Apricot"
       }
     }
   }
