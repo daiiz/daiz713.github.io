@@ -1,0 +1,95 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #e9e7e4;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: roboto, Meiryo!important;
+}
+core-scroll-header-panel {
+  height: 100%;
+}
+
+.drawer {
+  overflow-y: auto;
+}
+
+.apptitle {
+  padding: 6px;
+  padding-left: 10px;
+  font-size: 22px;
+}
+
+.tall {
+  height: 192px;
+  background-color: #7986cb;
+  color: #fff;
+  font-family: roboto, Meiryo;
+}
+
+.content {
+  /*padding: 12px;*/
+  padding-left: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+body /deep/ #mainContainer {
+  overflow-y: scroll;
+}
+
+.drawer {
+  background-color: #EEEEEE;
+}
+
+.card {
+  background-color: #fff;
+  margin-top: 12px;
+  margin-bottom: 2px;
+}
+.tool {
+  height: 44px;
+  background-color: #FEFFF2;/*#f5f5f5;*/
+}
+.intool {
+  color:#444;
+  margin-top: 2px;
+  margin-left: 1px;
+}
+.description {
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 10px;
+}
+
+.who {
+  padding: 16px;
+}
+
+paper-button {
+  width: 100%;
+  margin: 0px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0px;
+  padding: 5px;
+}
+
+html /deep/ .button-content {
+  justify-content: left!important;
+  text-align: left!important;
+}
+
+.githubicon {
+  font-size: 24px!important;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  position: relative;
+  top: -12px;
+}
+
+.icon24 {
+  font-size: 24px!important;
+}

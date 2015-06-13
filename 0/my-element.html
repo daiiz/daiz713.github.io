@@ -1,0 +1,17 @@
+<link href="bower_components/polymer/polymer.html" rel="import" />
+
+<polymer-element name="my-element" attributes="">
+  <template>
+    <style>
+    </style>
+    <!-- body -->
+  </template>
+  <script>
+    Polymer("my-element", {
+      ready: function() {
+        console.log("`my-element` is ready.");
+        this.fire("myElementReady");
+      }
+    });
+  </script>
+</polymer-element>

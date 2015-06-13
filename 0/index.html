@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <title>daiz.ぽとふ</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#beef00" id="headcolor"/>
+  <link rel="icon" sizes="192x192" href="icon.png" />
+  <link href="app.css" rel="stylesheet" type="text/css" />
+  <!-- polymer -->
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html" />
+  <link rel="import" href="bower_components/font-roboto/roboto.html" />
+  <link rel="import" href="bower_components/core-scroll-header-panel/core-scroll-header-panel.html" />
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html" />
+  <link rel="import" href="bower_components/core-icon/core-icon.html" />
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html" />
+  <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html" />
+  <link rel="import" href="bower_components/paper-shadow/paper-shadow.html" />
+  <link rel="import" href="bower_components/paper-button/paper-button.html" />
+  <link rel="import" href="bower_components/paper-ripple/paper-ripple.html" />
+  <!-- polymer icons -->
+  <link rel="import" href="bower_components/core-icons/core-icons.html" />
+  <link rel="import" href="bower_components/core-icons/hardware-icons.html" />
+  <link rel="import" href="bower_components/core-icons/av-icons.html" />
+  <link rel="import" href="bower_components/core-icons/device-icons.html" />
+  <!-- app -->
+  <link rel="stylesheet" href="octicons/octicons.css">
+  <script src="fw.js"></script>
+</head>
+<body fullbleed layout vertical unsolved>
+  <!-- body -->
+  <core-drawer-panel id="drawer" forceNarrow>
+    <div drawer class="drawer">
+      <!--paper-button left id="menu_default">新着</paper-button-->
+      <template repeat="{{m in menus}}" is="auto-binding" id="template_menus">
+        <paper-button id="menu_{{m.id}}" style="color:{{m.color}}">
+          <core-icon icon="{{m.icon}}" style="color:{{m.color}}; margin-right: 8px;"></core-icon>
+          {{m.name}}
+        </paper-button>
+      </template>
+    </div>
+    <core-scroll-header-panel condenses main>
+      <core-toolbar class=tall>
+        <paper-icon-button icon="menu" id="btn_menu"></paper-icon-button>
+        <div class=pagetitle>Hello World!</div>
+      </core-toolbar>
+      <div class=content>
+        <!-- main content area -->
+        <template repeat="{{c in cards}}" id="template_cards" is="auto-binding">
+          <!-- カード -->
+          <div style="margin-right:{{c.mr}}px; margin-left:{{c.ml}}px">
+            <paper-shadow z=1 style="width:{{c.width}}px;">
+              <div class=card style="width:{{c.width}}px;">
+                <!-- スクリーンショットエリア -->
+                <div class=screenshot style="width:100%; height:{{c.imgh}}px; background-color:{{c.bgcolor}}">
+                  <img src="{{c.imgtag}}" style="width: 100%; height: 100%; display:{{c.show_img}}">
+                </div>
+                <!-- 説明エリア -->
+                <div class=description style="height:{{c.dh}}px; overflow-x: hidden; overflow-y: auto">
+                  <div class=apptitle>
+                    {{c.title}}
+                  </div>
+                  {{c.description}}
+                </div>
+                <!-- ツールボックス -->
+                <div class=tool style="">
+                  <paper-icon-button style="display: {{c.show_page}}" id="toolbtn_page-{{c.id}}" icon="open-in-new" title="" class=intool></paper-icon-button>
+                  <paper-icon-button style="display: {{c.show_article}}" id="toolbtn_article-{{c.id}}" icon="description" title="" class=intool></paper-icon-button>
+                  <paper-icon-button style="display: {{c.show_github}}" id="toolbtn_github-{{c.id}}" class="githubicon mega-octicon octicon-mark-github intool"></paper-icon-button>
+                  <paper-icon-button style="display: {{c.show_more}}" id="toolbtn_more-{{c.id}}" icon="more-horiz" title="もっと" class=intool></paper-icon-button>
+                </div>
+              </div>
+            </paper-shadow>
+          </div>
+        </template>
+      </div>
+    </core-scroll-header-panel>
+  </core-drawer-panel>
+
+  <template is="auto-binding">
+  </template>
+  <script src="app.js"></script>
+  <script src="json.js"></script>
+</body>
