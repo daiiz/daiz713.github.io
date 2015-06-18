@@ -288,11 +288,11 @@ var data =
   {
     "tag": ["draft"],
     "body": {
-      d: "Coming Soon...",
+      d: "ApricotはアプリのUIを簡単にデザインするためのツールです。 つくりたいアプリ画面のレイアウトを画像としてペイントして、Apricot Kit を用いてビルドすることで、 HTML, CSSファイルが自動生成されます。つまり、絵を描き、少しのデザイン設定を書くだけでウェブアプリやChrome AppのUIを構築することができるのです。",
       title: "Apricot",
       image: "imgs/apricot.png",
       links: {
-        article: "",
+        article: "http://daiz-projects.appspot.com/preview/apricot/index.html",
         github: "https://github.com/daiz713/Apricot"
       }
     }
