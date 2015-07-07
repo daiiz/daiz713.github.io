@@ -159,6 +159,20 @@ var data =
   {
     "tag": ["chromeapp"],
     "body": {
+      d: "ごちそう写真のコレクション。ウェブサイトを閲覧中に、「食べたい！」と思ったごちそうの写真や「行きたい！」と思ったレストランの記事を簡単にストックできます。",
+      title: "ごちそうカード",
+      image: "imgs/gochicard.png",
+      links: {
+        page: "https://chrome.google.com/webstore/detail/%E3%81%94%E3%81%A1%E3%81%9D%E3%81%86%E3%82%AB%E3%83%BC%E3%83%89/kikhdipiobbjgdlcpdgbhhfljpoblcjg",
+        github: "https://github.com/daiz713/GochisoCard",
+        article: "http://daiiz.hatenablog.com/entry/2014/04/04/105600"
+      }
+    }
+  },
+
+  {
+    "tag": ["chromeapp"],
+    "body": {
       d: "新生活応援！徹夜時間を記録するchrome拡張機能です。",
       title: "Sleepless Night",
       links: {
