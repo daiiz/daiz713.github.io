@@ -8,7 +8,8 @@ var data =
       title: "Apricot",
       image: "imgs/apricot.png",
       links: {
-        article: "http://daiz-projects.appspot.com/preview/apricot/index.html",
+        page: "http://daiz-projects.appspot.com/preview/apricot/index.html",
+        article: "http://daiiz.hatenablog.com/archive/category/apricot",
         github: "https://github.com/daiz713/Apricot"
       }
     }
