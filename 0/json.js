@@ -1,5 +1,17 @@
 var data =
 {"cards": [
+    /* はてなインターンエントリ */
+  {
+    "tag": ["default"],
+    "body": {
+      d: "8月10日 〜 9月4日の間はてな京都オフィスで開催された「はてなサマーインターン2015」に参加してきました。最高の夏でした。",
+      title: "はてなインターン2015感想エントリ",
+      image: "imgs/hatenaintern.jpg",
+      links: {
+        article: "http://daiiz.hatenablog.com/entry/2015/09/11/101815"
+      }
+    }
+  },
   /* Apricot */
   {
     "tag": ["tool", "default"],
@@ -14,7 +26,7 @@ var data =
       }
     }
   },
-  
+
   {
     "tag": ["other", "default"],
     "body": {
