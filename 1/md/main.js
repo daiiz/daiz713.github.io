@@ -27,6 +27,7 @@ $(function () {
 
     var miilDiary = {
         contents: user_contents,
+        biggestURL: '',
         biggestFav: 0,
         photoNums: 0,
 
@@ -38,7 +39,7 @@ $(function () {
             var date = day[0] +'-'+ day[1] +'-'+ day[2];
             day = temp_day.format(date);
             if (this.lastDate === date) {
-                //day = temp_day.format('');
+                day = temp_day.format('');
             }
             this.lastDate = date;
             var title = temp_title.format(content.title);
@@ -46,33 +47,49 @@ $(function () {
             photo = temp_photo.format(content.page, photo);
             var diary = temp_diary.format(content.diary);
 
-            var photoFrame = temp_photoFrame.format(this.photoNums, WIDTH, day, title, WIDTH, WIDTH, photo, diary);
+            // 「食べたい！」数に応じて写真を小さくする
+            // 最小値はデフォルトの50%
+            var width = WIDTH;
+            var v = Math.min(100, this.biggestFav - content.favs);
+            var rate = Math.min(0.5, v / 100);
+            if (rate !== 0 && rate < 0.5) rate += 0.1;
+            width = width * (1 - rate);
+
+            var photoFrame = temp_photoFrame.format(this.photoNums, WIDTH, day, title, width, width, photo, diary);
             $contentsPage.append(photoFrame);
 
             this.bindEvents('content-' + this.photoNums);
             this.photoNums++;
         },
 
-        setBiggestFavNum: function () {
+        setBiggestFavNum: function (flag) {
             var max = 0;
+            var max_url = '';
             this.contents.forEach(function (content) {
                 var fav = +content.favs;
-                if (fav > max) max = fav;
+                if (fav > max) {
+                    max = fav;
+                    max_url = content.url;
+                }
             });
+            this.biggestURL = max_url;
             this.biggestFav = max;
+            if (flag) {
+                $('.toppage').css({backgroundImage: 'url('+ max_url +')'});
+            }
         },
 
         init: function (settings) {
             $('.toptitle').text(settings.title);
         },
 
-        // 表示エリア外の画像以外は非表示にしておく
+        // 表示エリア外の画像は非表示にしておく
         bindEvents: function (elemId) {
             $('#' + elemId).on('inview', function (event, isInView, visiblePartX, visiblePartY) {
                 var $photo = $('#' + elemId).find('.photo');
                 if (isInView) {
                     if (visiblePartY == 'both' && visiblePartX == 'left'){
-                        $photo.fadeIn('slow');
+                        $photo.fadeIn();
                     }
                     else if (visiblePartY == 'both' && (visiblePartX == 'right' || visiblePartX == 'both')){
                         $photo.fadeIn();
@@ -84,7 +101,7 @@ $(function () {
         }
     };
 
-    miilDiary.setBiggestFavNum();
+    miilDiary.setBiggestFavNum(true);
 
     // コンテンツの最初の要素は設定オブジェクト
     var settings = miilDiary.contents[0];
