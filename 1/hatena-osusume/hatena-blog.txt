@@ -1,0 +1,61 @@
+HTML:
+
+<div id="osusumes">
+    <div class="osusume_title">この記事の著者は、こんな記事も書いています</div>
+
+    <div class="osusume">
+        <div class="osusume_entry_title" id="e0t">
+            <a href="http://daiiz.hatenablog.com/entry/2015/09/11/101815" target="_blank">
+                はてなサマーインターンが終わり、エンジニアへの道が始まった <img class="osusume_img" src="http://b.hatena.ne.jp/entry/image/http://daiiz.hatenablog.com/entry/2015/09/11/101815">
+            </a>
+        </div>
+    </div>
+
+    <div class="osusume">
+        <div class="osusume_entry_title" id="e0t">
+            <a href="http://daiiz.hatenablog.com/entry/2015/09/18/180925" target="_blank" class="osusume_a">
+                Apricot 2.0 の紹介 <img class="osusume_img" src="http://b.hatena.ne.jp/entry/image/http://daiiz.hatenablog.com/entry/2015/09/18/180925">
+            </a>
+        </div>
+    </div>
+
+    <div class="osusume">
+        <div class="entry_title" id="e0t">
+            <div class="osusume_entry_title" id="e0t">
+                <a href="http://daiiz.hatenablog.com/entry/2015/09/04/181344" target="_blank" class="osusume_a">
+                    HTSPはどうですか<img class="osusume_img" src="http://b.hatena.ne.jp/entry/image/http://daiiz.hatenablog.com/entry/2015/09/04/181344">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+CSS:
+/* 記事下osusume */
+#osusumes {
+    border: 6px solid #eee;
+    border-radius: 6px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.osusume {
+    padding: 5px;
+    padding-left: 10px;
+    border-bottom: 2px solid #eee;
+    width: 97%;
+}
+.osusume_title {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 5px;
+    color: #555;
+}
+.osusume_entry_title {
+    font-size: 15px;
+}
+
+.osusume_img {
+    margin-left: 6px;
+}
+/* */
