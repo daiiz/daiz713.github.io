@@ -415,7 +415,7 @@ var works = {
     },
     "work37": {
         "title": "「ミイルの台所」でランチをいただきました",
-        "product_uri": "$gh/2014/12/02/232846",
+        "product_uri": "$blog/2014/12/02/232846",
         "about_uri": "$gh/2014/12/02/232846",
         "labels": [
             "miil"
