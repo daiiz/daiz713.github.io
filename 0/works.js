@@ -347,6 +347,18 @@ var works = {
         ],
         "products": []
     },
+    "work31": {
+        "title": "appStorage",
+        "product_uri": "$gh/daiz713/appStorage",
+        "about_uri": "$blog/2014/09/11/153817",
+        "labels": [
+            "Chromeアプリ"
+        ],
+        "icon_uri": "",
+        "short_text": "",
+        "languages": [],
+        "products": []
+    },
     "work32": {
         "title": "miil-client",
         "product_uri": "$gh/daiz713/miilClient",
@@ -423,6 +435,18 @@ var works = {
         "icon_uri": "",
         "short_text": "",
         "languages": [],
+        "products": []
+    },
+    "work38": {
+        "title": "ReportHina",
+        "product_uri": "$gh/daiz713/ReportHina",
+        "about_uri": "$blog/entry/2015/09/19/212812",
+        "labels": [],
+        "icon_uri": "",
+        "short_text": "",
+        "languages": [
+            "TeX"
+        ],
         "products": []
     },
     "work39": {

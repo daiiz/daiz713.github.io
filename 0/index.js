@@ -14,7 +14,7 @@ window.onload = function () {
     ]);
 
     var tools = potofu2.makeList('便利なツール', 'table', [
-        22, 17, 18, 20, 33, 26
+        22, 17, 18, 20, 33, 26, 38, 31
     ]);
 
     var android = potofu2.makeList('Androidアプリ', 'appcard', [
