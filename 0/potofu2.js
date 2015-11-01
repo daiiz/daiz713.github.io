@@ -23,17 +23,17 @@
   * 7... `+`で開始する
   */
 
- String.prototype.format = function() {
-   var str = this.toString();
-   var args = arguments;
-   var len_blanks = (str.match(/\{\}/g) || []).length;
-   var len_args = args.length;
-   if(len_args != len_blanks) return str;
-   for(var i=0; i < args.length; i++) {
-     str = str.replace(/\{\}/, args[i]);
-   }
-   return str;
- }
+String.prototype.format = function() {
+  var str = this.toString();
+  var args = arguments;
+  var len_blanks = (str.match(/\{\}/g) || []).length;
+  var len_args = args.length;
+  if(len_args != len_blanks) return str;
+  for(var i=0; i < args.length; i++) {
+    str = str.replace(/\{\}/, args[i]);
+  }
+  return str;
+}
 
 var potofu2 = {
     /* CSVでの変数 */
@@ -86,7 +86,12 @@ var potofu2 = {
             var c = works['work' + id];
             var uri = this._solvesC(c.product_uri);
             var labels = this._getLabels(c.labels, uri) + this._getLangLabels(c.languages);
-            var a = '<a href="{}" target="_blank">{}</a> {}'.format(uri, c.title, labels);
+            var a;
+            if (uri === '?') {
+                a = '<span class="no_uri_item">{}</span> {}'.format(c.title, labels);
+            }else {
+                a = '<a href="{}" target="_blank">{}</a> {}'.format(uri, c.title, labels);
+            }
             var cl = (i % 2 === 0) ? 'tr_' : '_tr';
             var div = '<div class="{}">{}</div>'.format(cl, a);
             res += div;
