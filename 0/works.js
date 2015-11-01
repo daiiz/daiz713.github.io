@@ -363,7 +363,7 @@ var works = {
     },
     "work33": {
         "title": "Potofu2",
-        "product_uri": "?",
+        "product_uri": "$gh/daiz713/Potofu2",
         "about_uri": "?",
         "labels": [
             "CSV"
