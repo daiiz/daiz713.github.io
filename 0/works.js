@@ -458,7 +458,6 @@ var works = {
         "product_uri": "?",
         "about_uri": "?",
         "labels": [
-            "アルバイト",
             "Cordova"
         ],
         "icon_uri": "",
