@@ -10,7 +10,7 @@ window.onload = function () {
     ]);
 
     var teian = potofu2.makeList('提案', 'table', [
-        5, 3, 2, 21, 27
+        5, 3, 2, 21, 27, 6
     ]);
 
     var tools = potofu2.makeList('便利なツール', 'table', [

@@ -64,6 +64,20 @@ var works = {
             "koto"
         ]
     },
+    "work6": {
+        "title": "Polymerをもっと格好良く使うためのアイデア",
+        "product_uri": "$blog/2015/11/03/125701",
+        "about_uri": "$blog/2015/11/03/125701",
+        "labels": [
+            "hatebu",
+            "試作",
+            "WebComponent"
+        ],
+        "icon_uri": "",
+        "short_text": "",
+        "languages": [],
+        "products": []
+    },
     "work7": {
         "title": "MiilClient",
         "product_uri": "$play=app.daiz.miilclient",
