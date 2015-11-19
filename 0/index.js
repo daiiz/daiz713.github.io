@@ -22,7 +22,7 @@ window.onload = function () {
     ]);
 
     var chromeapp = potofu2.makeList('Chromeアプリ・拡張機能', 'appcard', [
-        11, 15, 10, 14, 13, 12, 34
+        11, 15, 10, 13, 12, 34
     ]);
 
     var polymer = potofu2.makeList('Polymer芸', 'table', [
